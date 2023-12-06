@@ -1,4 +1,4 @@
-const numberOfFilms = prompt ('Сколько фильмов вы уже посмотрели?',''); // + в начале сделан чтобы было число при выводе
+const numberOfFilms = +prompt ('Сколько фильмов вы уже посмотрели?',''); // + в начале сделан чтобы было число при выводе
 
 const personalMovieDB = {
     count: numberOfFilms,
@@ -9,15 +9,30 @@ const personalMovieDB = {
 };
 
 
-const a = prompt ('Один из последних просмотренных фильмов?',''),
-      b = prompt ('На сколько оцените его?',''),
-      c = prompt ('Один из последних просмотренных фильмов?',''),
-      d = prompt ('На сколько оцените его?','');
+for (let i = 0; i <2; i++){
+    const a = prompt ('Один из последних просмотренных фильмов?',''),
+          b = prompt ('На сколько оцените его?','');
+
+    if (a != null && b != null && a != '' && b!= '' && a.length <50){
+        personalMovieDB.movies[a] = b; 
+        console.log('done');
+    } else {
+        console.log('error');
+        i --;
+    }
+
+     
+}
+
+if(personalMovieDB.count < 10){
+    console.log('просмотрено довольно мало фильмов');
+} else if (personalMovieDB.count >=10 && personalMovieDB.count <30){
+    console.log('вы классический зритель');
+} else if ( personalMovieDB.count >=30 ){
+    console.log('вы киноман');
+} else {
+    console.log('ошибка');
+}
 
 
-      personalMovieDB.movies[a] = b;     
-      personalMovieDB.movies[c] = d;
-
-
-
-      console.log(personalMovieDB);
+console.log(personalMovieDB);
