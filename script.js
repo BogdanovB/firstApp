@@ -1,7 +1,7 @@
 let numberOfFilms;
 
 function start(){
-    numberOfFilms = +prompt ('Сколько фильмов вы уже посмотрели?',''); // + в начале сделан чтобы было число при выводе
+    numberOfFilms = +prompt ('Сколько фильмов вы уже посмотрели?',''); // + в начале сделан чтобы было число при выводе(делает числовой тип)
 
     while (numberOfFilms == '' || numberOfFilms ==null || isNaN(numberOfFilms)) {
         numberOfFilms = +prompt ('Сколько фильмов вы уже посмотрели?','');
@@ -9,6 +9,7 @@ function start(){
 }
 
 start();
+
 
 const personalMovieDB = {
     count: numberOfFilms,
