@@ -144,33 +144,33 @@ console.log(findMaxNumber(1,2,3))
 
 
 
-// // числа фибоначи
+// числа фибоначи
 
-// function fib(numb) {
+function fib(numb) {
  
-//     let fibResult='';
-//     let num1= 0;
-//     let num2= 1;
+    let fibResult='';
+    let num1= 0;
+    let num2= 1;
 
-//     if (typeof(numb)!=='number' || numb <=0 || !Number.isInteger(numb)){
-//         return '';
-//     }
-//     if (numb === 0){
-//         return '';
-//     }
+    if (typeof(numb)!=='number' || numb <=0 || !Number.isInteger(numb)){
+        return '';
+    }
+    if (numb === 0){
+        return '';
+    }
 
-//     for (let i = 0; i < numb; i++){
-//         if (i+1 === numb){
-//             fibResult += `${num1}`;
-//         } else {
-//             fibResult += `${num1} `;
-//         }
-//         let num3= num1+num2;
-//         num1=num2;
-//         num2=num3;
-//     }
+    for (let i = 0; i < numb; i++){
+        if (i+1 === numb){
+            fibResult += `${num1}`;
+        } else {
+            fibResult += `${num1} `;
+        }
+        let num3= num1+num2;
+        num1=num2;
+        num2=num3;
+    }
 
-//     return fibResult;
-// }
-// console.log(fib(0))
+    return fibResult;
+}
+console.log(fib(0))
 
