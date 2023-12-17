@@ -15,12 +15,9 @@ const options = {
 const {border, bg} = options.colors;
 console.log(border);
 
-
 console.log(Object.keys(options).length);//метод Object.keys берет все ключи из Обьекта OPTIONS, и выписывает отдельно как массив. 
 //теперь так как это массив я могу истользовать функцию length. и подсчитать сколько уменя ключей в OPTIONS.
 //Это удобно потому что length не работает на прямую к обьектам. приходится делать так. 
-
-
 
 //как перебрать все свойства внутри обьекта по ключам и внутри влоденного обьекта.
 for (let key in options){
